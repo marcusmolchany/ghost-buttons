@@ -7,9 +7,7 @@
 @gb-color-orange: #E67E22;
 @gb-color-red: #E74C3C;
 
-@gb-minWidth--btn: 150px;
-@gb-minHeight--btn: 50px;
-@gb-borderRadius--btn: 5px;
+@gb-borderRadius--btn: 3px;
 
 /* mixins */
 .gb-m-transition() {
@@ -46,17 +44,29 @@
 }
 
 .gb-btn {
-  min-width: @gb-minWidth--btn;
-  min-height: @gb-minHeight--btn;
-  margin: 10px;
-  border: 2px solid transparent;
+  margin: 10px 0;
+  border: 1px solid transparent;
   .gb-m-borderRadius(@gb-borderRadius--btn);
   padding: 10px 25px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 100;
+  font-size: 16px;
+  font-weight: 100;
 
   &:hover,
   &:active {
     cursor: pointer;
   }
+}
+
+.gb-btn--small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.gb-btn--large {
+  padding: 15px 40px;
+  font-size: 18px;
 }
 
 .gb-btn--default {

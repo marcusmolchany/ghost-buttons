@@ -75,7 +75,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-    files: ['<%=jsDir%>*.js', '<%=cssDir%>*.css'],
+    files: ['<%=jsDir%>*.js', '<%=cssDir%>*.css', '<%=lessDir%>*.less'],
     tasks: ['less', 'csslint', 'cssmin', 'jshint', 'concat', 'uglify']
     }
   });

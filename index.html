@@ -4,20 +4,51 @@
     <style>
       body {
         margin: 0;
-        background-color: #95A5A6;
+        background-color: #1ABC9C;
       }
       .gb-wrapper {
         padding: 50px;
       }
+      .gb-spacer {
+        padding: 25px 0;
+      }
+      .gb-header {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-weight: 100;
+        color: #2D2D2D;
+      }
+      .gb-u-noMargin {
+        margin: 0;
+      }
     </style>
   </head>
   <body>
-    <section class="gb-wrapper">
-      <button class="gb-btn gb-btn--default">Button</button>
-      <button class="gb-btn gb-btn--blue">Button</button>
-      <button class="gb-btn gb-btn--purple">Button</button>
-      <button class="gb-btn gb-btn--orange">Button</button>
-      <button class="gb-btn gb-btn--red">Button</button>
-    </section>
+    <article class="gb-wrapper">
+      <h1 class="gb-header">Ghost Buttons</h1>
+      <section class="gb-spacer">
+        <h3 class="gb-header gb-u-noMargin">Standard Buttons</h3>
+        <button class="gb-btn gb-btn--default">Button</button>
+        <button class="gb-btn gb-btn--blue">Button</button>
+        <button class="gb-btn gb-btn--purple">Button</button>
+        <button class="gb-btn gb-btn--orange">Button</button>
+        <button class="gb-btn gb-btn--red">Button</button>
+      </section>
+      <section class="gb-spacer">
+        <h3 class="gb-header gb-u-noMargin">Small Buttons</h3>
+        <button class="gb-btn gb-btn--small gb-btn--default">Button</button>
+        <button class="gb-btn gb-btn--small gb-btn--blue">Button</button>
+        <button class="gb-btn gb-btn--small gb-btn--purple">Button</button>
+        <button class="gb-btn gb-btn--small gb-btn--orange">Button</button>
+        <button class="gb-btn gb-btn--small gb-btn--red">Button</button>
+      </section>
+      <section class="gb-spacer">
+        <h3 class="gb-header gb-u-noMargin">Large Buttons</h3>
+        <button class="gb-btn gb-btn--large gb-btn--default">Button</button>
+        <button class="gb-btn gb-btn--large gb-btn--blue">Button</button>
+        <button class="gb-btn gb-btn--large gb-btn--purple">Button</button>
+        <button class="gb-btn gb-btn--large gb-btn--orange">Button</button>
+        <button class="gb-btn gb-btn--large gb-btn--red">Button</button>
+      </section>
+    </article>
   </body>
 </html>
