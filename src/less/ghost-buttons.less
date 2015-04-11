@@ -1,0 +1,81 @@
+/* variables */
+@gb-color-transparent: transparent;
+@gb-color-white: #FFFFFF;
+@gb-color-black: #000000;
+@gb-color-blue: #3498DB;
+@gb-color-purple: #9B59B6;
+@gb-color-orange: #E67E22;
+@gb-color-red: #E74C3C;
+
+@gb-minWidth--btn: 150px;
+@gb-minHeight--btn: 50px;
+@gb-borderRadius--btn: 5px;
+
+/* mixins */
+.gb-m-transition() {
+  -webkit-transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+     -moz-transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+       -o-transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+          transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.gb-m-borderRadius(@gb-borderRadius) {
+  -webkit-border-radius: @gb-borderRadius;
+     -moz-border-radius: @gb-borderRadius;
+          border-radius: @gb-borderRadius;
+}
+
+.gb-m-btn(@gb-color--borderColor, @gb-color--backgroundColor, @gb-color--textColor) {
+  border-color: @gb-color--borderColor;
+  background-color: @gb-color-transparent;
+  color: @gb-color--textColor;
+
+  .gb-m-transition();
+
+  &:hover {
+    border-color: @gb-color--borderColor;
+    background-color: @gb-color--backgroundColor;
+    color: @gb-color--textColor; 
+  }
+
+  &:active {
+    border-color: darken(@gb-color--borderColor, 10%);
+    background-color: darken(@gb-color--backgroundColor, 10%);
+    color: darken(@gb-color--textColor, 10%);
+  }
+}
+
+.gb-btn {
+  min-width: @gb-minWidth--btn;
+  min-height: @gb-minHeight--btn;
+  margin: 10px;
+  border: 2px solid transparent;
+  .gb-m-borderRadius(@gb-borderRadius--btn);
+  padding: 10px 25px;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+}
+
+.gb-btn--default {
+  .gb-m-btn(@gb-color-white, @gb-color-black, @gb-color-white);
+}
+
+.gb-btn--blue {
+  .gb-m-btn(@gb-color-white, @gb-color-blue, @gb-color-white);
+}
+
+.gb-btn--purple {
+  .gb-m-btn(@gb-color-white, @gb-color-purple, @gb-color-white);
+}
+
+.gb-btn--orange {
+  .gb-m-btn(@gb-color-white, @gb-color-orange, @gb-color-white);
+}
+
+.gb-btn--red {
+  .gb-m-btn(@gb-color-white, @gb-color-red, @gb-color-white);
+}
+
