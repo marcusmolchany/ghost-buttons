@@ -6,7 +6,9 @@
 @gb-color-purple: #9B59B6;
 @gb-color-orange: #E67E22;
 @gb-color-red: #E74C3C;
+@gb-color-green: #1ABC9C;
 
+@gb-borderThickness--btn: 1px;
 @gb-borderRadius--btn: 3px;
 
 /* mixins */
@@ -23,29 +25,38 @@
           border-radius: @gb-borderRadius;
 }
 
-.gb-m-btn(@gb-color--borderColor, @gb-color--backgroundColor, @gb-color--textColor) {
-  border-color: @gb-color--borderColor;
-  background-color: @gb-color-transparent;
+.gb-m-btn(@gb-color--borderColor, @gb-color--borderColorToggle,
+          @gb-color--backgroundColor, @gb-color-backgroundColorToggle,
+          @gb-color--textColor, @gb-color--textColorToggle,
+          @gb-borderThickness, @gb-borderRadius) {
+
+  border: @gb-borderThickness solid @gb-color--borderColor;
+  .gb-m-borderRadius(@gb-borderRadius);
+  background-color: @gb-color--backgroundColor;
   color: @gb-color--textColor;
 
   .gb-m-transition();
 
   &:hover {
-    border-color: @gb-color--borderColor;
-    background-color: @gb-color--backgroundColor;
-    color: @gb-color--textColor; 
+    border-color: @gb-color--borderColorToggle;
+    background-color: @gb-color-backgroundColorToggle;
+    color: @gb-color--textColorToggle; 
   }
 
   &:active {
-    border-color: darken(@gb-color--borderColor, 10%);
-    background-color: darken(@gb-color--backgroundColor, 10%);
-    color: darken(@gb-color--textColor, 10%);
+    border-color: darken(@gb-color--borderColorToggle, 10%);
+    background-color: darken(@gb-color-backgroundColorToggle, 10%);
+    color: darken(@gb-color--textColorToggle, 10%);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
 .gb-btn {
   margin: 10px 0;
-  border: 1px solid transparent;
+  border: @gb-borderThickness--btn solid transparent;
   .gb-m-borderRadius(@gb-borderRadius--btn);
   padding: 10px 25px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -70,22 +81,59 @@
 }
 
 .gb-btn--default {
-  .gb-m-btn(@gb-color-white, @gb-color-black, @gb-color-white);
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-black,
+            @gb-color-white, @gb-color-white,
+            @gb-borderThickness--btn, @gb-borderRadius--btn);
 }
 
 .gb-btn--blue {
-  .gb-m-btn(@gb-color-white, @gb-color-blue, @gb-color-white);
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-blue, 
+            @gb-color-white, @gb-color-white,
+            @gb-borderThickness--btn, @gb-borderRadius--btn);
 }
 
 .gb-btn--purple {
-  .gb-m-btn(@gb-color-white, @gb-color-purple, @gb-color-white);
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-purple, 
+            @gb-color-white, @gb-color-white,
+            @gb-borderThickness--btn, @gb-borderRadius--btn);
 }
 
 .gb-btn--orange {
-  .gb-m-btn(@gb-color-white, @gb-color-orange, @gb-color-white);
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-orange, 
+            @gb-color-white, @gb-color-white,
+            @gb-borderThickness--btn, @gb-borderRadius--btn);
 }
 
 .gb-btn--red {
-  .gb-m-btn(@gb-color-white, @gb-color-red, @gb-color-white);
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-red, 
+            @gb-color-white, @gb-color-white,
+            @gb-borderThickness--btn, @gb-borderRadius--btn);
+}
+
+/* for demonstration purposes only */
+.gb-btn--demo1 {
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-white, 
+            @gb-color-white, @gb-color-green,
+            @gb-borderThickness--btn, @gb-borderRadius--btn);
+}
+
+.gb-btn--demo2 {
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-white, 
+            @gb-color-white, @gb-color-green,
+            2px, 0);
+}
+
+.gb-btn--demo3 {
+  .gb-m-btn(@gb-color-white, @gb-color-white,
+            @gb-color-transparent, @gb-color-white, 
+            @gb-color-white, @gb-color-green,
+            3px, 30px);
 }
 

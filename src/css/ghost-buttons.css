@@ -24,7 +24,10 @@
   font-size: 18px;
 }
 .gb-btn--default {
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background-color: transparent;
   color: #ffffff;
   -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -42,8 +45,14 @@
   background-color: #000000;
   color: #e6e6e6;
 }
+.gb-btn--default:focus {
+  outline: none;
+}
 .gb-btn--blue {
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background-color: transparent;
   color: #ffffff;
   -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -61,8 +70,14 @@
   background-color: #217dbb;
   color: #e6e6e6;
 }
+.gb-btn--blue:focus {
+  outline: none;
+}
 .gb-btn--purple {
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background-color: transparent;
   color: #ffffff;
   -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -80,8 +95,14 @@
   background-color: #804399;
   color: #e6e6e6;
 }
+.gb-btn--purple:focus {
+  outline: none;
+}
 .gb-btn--orange {
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background-color: transparent;
   color: #ffffff;
   -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -99,8 +120,14 @@
   background-color: #bf6516;
   color: #e6e6e6;
 }
+.gb-btn--orange:focus {
+  outline: none;
+}
 .gb-btn--red {
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background-color: transparent;
   color: #ffffff;
   -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -117,4 +144,83 @@
   border-color: #e6e6e6;
   background-color: #d62c1a;
   color: #e6e6e6;
+}
+.gb-btn--red:focus {
+  outline: none;
+}
+/* for demonstration purposes only */
+.gb-btn--demo1 {
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  -o-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.gb-btn--demo1:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #1abc9c;
+}
+.gb-btn--demo1:active {
+  border-color: #e6e6e6;
+  background-color: #e6e6e6;
+  color: #148f77;
+}
+.gb-btn--demo1:focus {
+  outline: none;
+}
+.gb-btn--demo2 {
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  -o-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.gb-btn--demo2:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #1abc9c;
+}
+.gb-btn--demo2:active {
+  border-color: #e6e6e6;
+  background-color: #e6e6e6;
+  color: #148f77;
+}
+.gb-btn--demo2:focus {
+  outline: none;
+}
+.gb-btn--demo3 {
+  border: 3px solid #ffffff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  -o-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.gb-btn--demo3:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #1abc9c;
+}
+.gb-btn--demo3:active {
+  border-color: #e6e6e6;
+  background-color: #e6e6e6;
+  color: #148f77;
+}
+.gb-btn--demo3:focus {
+  outline: none;
 }
